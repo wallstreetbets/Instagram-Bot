@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VocalMetric</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>VocalMetric</h1>
+    <p class="tagline">Voice-based impairment check</p>
+  </header>
+
+  <main class="main">
+    <section class="card">
+      <div class="instructions">
+        <p>Say the phrase: <strong>"Voice of reason, crystal clear"</strong>.</p>
+        <p>Press start, speak clearly, and wait for the analysis.</p>
+      </div>
+      <button class="record" id="recordBtn">Start voice check</button>
+      <p class="status" id="statusText">Ready</p>
+
+      <div class="result" id="resultCard">
+        <h3 id="resultTitle"></h3>
+        <p class="confidence" id="resultConfidence"></p>
+        <p class="details" id="resultDetails"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    VocalMetric is for entertainment and informational purposes only. Not a medical, legal, or safety device.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

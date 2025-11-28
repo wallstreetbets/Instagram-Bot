@@ -1,0 +1,133 @@
+:root {
+  --bg: #0c0f1a;
+  --panel: #131a2b;
+  --accent: #6c8bff;
+  --success: #2ecc71;
+  --warning: #e67e22;
+  --text: #e7ecff;
+  --muted: #9a9fb8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #19233d, var(--bg));
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 24px 16px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.tagline {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.instructions {
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+button.record {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: var(--accent);
+  color: #0c0f1a;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button.record:active {
+  transform: translateY(1px);
+}
+
+button.record.recording {
+  background: #ff6b6b;
+  color: #1d0b0b;
+  box-shadow: 0 0 0 6px rgba(255, 107, 107, 0.2);
+}
+
+.status {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.result {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: none;
+}
+
+.result.sober {
+  background: rgba(46, 204, 113, 0.12);
+  border-color: rgba(46, 204, 113, 0.4);
+}
+
+.result.intoxicated {
+  background: rgba(230, 126, 34, 0.12);
+  border-color: rgba(230, 126, 34, 0.4);
+}
+
+.result h3 {
+  margin: 0 0 8px 0;
+}
+
+.result .confidence {
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
